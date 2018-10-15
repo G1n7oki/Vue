@@ -1,0 +1,25 @@
+// 背景图片
+.bg-image(@url, @x, @y) {
+  background: ~'url("@{url}@2x.png")' @x @y no-repeat;
+  background-size: 100% 100%;
+}
+
+// 不换行
+.no-wrap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// 扩展点击区域
+.extend-click() {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+  }
+}
